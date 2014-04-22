@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap
-//= require_tree .
 //= require vendor/jquery.easing.1.3.js
 //= require vendor/jquery.stellar.min.js
 //= require vendor/main.js
 //= require vendor/waypoints.js
+//= require_tree .
+
