@@ -1,33 +1,18 @@
-<h1>Listing users</h1>
+<div class="container">
 
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Email</th>
-      <th>Photo</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<h1 class="titles"> Missing Classmates </h1>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.user_photo %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  <% @users.each do |user| %>
+ <div class="people">
+        <h3 class="name"><%= user.name %></h3>
+        <%= image_tag user.user_photo, class: "photo" %>
+       <!--  <%= link_to 'Show', user %>
+        <%= link_to 'Edit', edit_user_path(user) %>
+        <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+
+</div>
     <% end %>
-  </tbody>
-</table>
 
-<br>
+  </div>
 
-<%= link_to 'New User', new_user_path %>
+<!--<%= link_to 'New User', new_user_path %> -->
